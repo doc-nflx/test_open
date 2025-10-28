@@ -1,0 +1,10 @@
+- name: Reboot macOS servers
+  hosts: TEST
+  become: yes
+  tasks:
+    - name: Reboot the system
+      shell: |
+        sudo shutdown -r now "Reboot triggered by Ansible"
+      async: 1
+      poll: 0
+
