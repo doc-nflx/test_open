@@ -1,0 +1,11 @@
+  name: Verificar uptime de los servidores
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Ejecutar 'uptime'
+      ansible.builtin.shell: uptime
+      register: resultado
+
+    - name: Mostrar resultado
+      ansible.builtin.debug:
+        var: resultado.stdout
