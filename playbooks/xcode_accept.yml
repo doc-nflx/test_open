@@ -1,0 +1,7 @@
+- name: Accept Xcode License Agreement
+  hosts: macs
+  become: yes
+
+  tasks:
+    - name: Accept Xcode license
+      command: xcodebuild -license accept
