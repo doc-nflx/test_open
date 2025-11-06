@@ -1,5 +1,5 @@
 - name: Accept Xcode License Agreement
-  hosts: macs
+  hosts: all
   become: yes
 
   tasks:
